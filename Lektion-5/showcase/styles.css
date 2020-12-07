@@ -1,3 +1,8 @@
+/* 
+  primary     #0066b3
+  secondary   #169e8c
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,10 +16,55 @@ html, body {
   width: 100%;
   margin: auto;
 }
+.btn {
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: transparent;
+  width: 100%;
+}
+.btn-primary {
+  background-color: #0066b3;
+  color: #fff;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 10px 3px #ffffff;
+}
+.bg-dark {
+  background-color: #333;
+  color: #fff;
+}
+.bg-light {
+  background-color: #dadada;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0066b3;
+}
+a:hover {
+  color: #169e8c;
+}
+
+/* TOP NAV */
+.top-nav{
+  padding: 0.2rem 1rem;
+  border-bottom: 1px solid #333;
+  display: none;
+}
+
+
+/* NAVBAR */
 .navbar {
   padding: 0.5rem 1rem;
 }
-.navbar .container {
+.navbar .container, .top-nav .container {
   display: flex;
   justify-content: space-between;
 }
@@ -23,13 +73,6 @@ html, body {
 }
 .nav-link{
   list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #0066b3;
-}
-a:hover {
-  color: #169e8c;
 }
 .navbar-nav {
   display: flex;
@@ -45,15 +88,46 @@ a:hover {
   font-size: 2rem;
   color: #0066b3;
 }
-.bg-dark {
-  background-color: #333;
-  color: #fff;
-}
-.bg-light {
-  background-color: #dadada;
-  color: #333;
+
+/* SHOWCASE */
+
+#showcase {
+  background-image: linear-gradient(to bottom right, #d5d5e6, #9f9fa8);
+  min-height: 200px;
 }
 
+#showcase .container {
+  display: flex;
+  /* align-items: stretch; */
+  justify-content: space-around;
+}
+
+#showcase .container img {
+  height: 500px;
+  display: none;
+}
+.content {
+  align-self: center;
+  text-align: center;
+  padding: 3rem;
+  height: 100%;
+}
+.text {
+  margin-bottom: 3rem;
+}
+
+
+
+
+
+/* MEDIAQUERIES */
+
+/* @media (max-width: 768px) {
+  
+}
+@media (max-width: 1100px) {
+
+} */
 @media (min-width: 768px) {
   .navbar-toggler {
     display: none;
@@ -70,6 +144,18 @@ a:hover {
   }
   .container {
     max-width: 720px;
+  }
+  #showcase .container img {
+    display: inline-block;
+  }
+  .content {
+    text-align: left;
+  }
+  .btn {
+    width: auto;
+  }
+  .top-nav{
+    display: block;
   }
 }
 
